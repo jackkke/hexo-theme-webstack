@@ -5,6 +5,19 @@
     <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('<%= url_for(menu.url) %>', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="<%= url_for(menu.url) %>">
       <div class="xe-comment-entry">
         <a class="xe-user-img">
+          <%
+            if (menu.img == null || menu.img == undefined || menu.img.trim() == "") {
+              menu.img = "/images/logos/myblog.png";
+              var name = /^(https?:\/\/)([0-9a-z.]+)(:[0-9]+)?([/0-9a-z.]+)?(\?[0-9a-z&=]+)?(#[0-9-a-z]+)?/i;
+              if (name.test(menu.url)) {
+                var reg = /^(https?:\/\/)([0-9a-z.]+)(:[0-9]+)?/i
+                domain = menu.url.match(reg);
+                if (domain != null && domain[0] != null && name.test(domain[0])) {
+                  menu.img = domain[0] + "/favicon.ico";
+                }
+              }
+            }
+          %>
           <img data-src="<%= url_for(menu.img) %>" class="lozad img-circle" width="40">
         </a>
         <div class="xe-comment">
