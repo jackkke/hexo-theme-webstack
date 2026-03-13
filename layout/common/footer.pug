@@ -30,8 +30,13 @@ footer.main-footer.sticky.footer-type-1
 .
 
 //- 引入 JavaScript 文件
-each jsFile in [setting.js.bootstrap, setting.js.TweenMax, setting.js.resizeable, setting.js.joinable, setting.js.xenonApi, setting.js.xenonToggles, setting.js.xenonCustom]
-  script(src=jsFile)
+script(src=url_for("/js/resizeable.min.js"))
+script(src=url_for("/js/joinable.js"))
+script(src=url_for("/js/xenon-api.min.js"))
+script(src=url_for("/js/xenon-toggles.min.js"))
+script(src=url_for("/js/xenon-custom.min.js"))
+script(src=setting.js.bootstrap)
+script(src=setting.js.TweenMax)
 
 if setting.busuanzi.enable
   script(async, src=url_for(setting.js.busuanzi))

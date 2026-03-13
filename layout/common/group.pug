@@ -5,7 +5,13 @@ h4.text-gray
 .row
   each menu in menus
     .col-sm-3
-      .xe-widget.xe-conversations.box2.label-info(onclick='window.open("' + url_for(menu.url) + '", "_blank")' data-toggle='tooltip' data-placement='bottom' title='' data-original-title=url_for(menu.url))
+      .xe-widget.xe-conversations.box2.label-info(
+        onclick='window.open("' + url_for(menu.url) + '", "_blank")'
+        data-toggle='tooltip'
+        data-placement='bottom'
+        title=''
+        data-original-title=url_for(menu.url)
+      )
         .xe-comment-entry
           a.xe-user-img
             img.lozad.img-circle(data-src=url_for(menu.img) width='40')

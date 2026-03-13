@@ -13,23 +13,21 @@ body.page-body
               i.fas.fa-bars
 
           li.dropdown.hover-line.language-switcher
-            - const defaultFlag = Array.isArray(setting.flag) ? (setting.flag.find(flag => flag.default) || setting.flag[0]) : setting.flag
-            a.dropdown-toggle(href=url_for(defaultFlag.index || '/index.html') data-toggle='dropdown')
-              img(src=url_for('images/flags/' + defaultFlag.icon + '.png') alt=defaultFlag.icon)
+            - const flags = setting.flag
+            - const defaultFlag = Array.isArray(flags) ? (flags.find(f => f.default) || flags[0]) : flags
+            - const getFlagUrl = (f) => url_for(f.index || '/index.html')
+            - const getFlagIcon = (f) => url_for('images/flags/' + f.icon + '.png')
+
+            a.dropdown-toggle(href=getFlagUrl(defaultFlag) data-toggle='dropdown')
+              img(src=getFlagIcon(defaultFlag) alt=defaultFlag.icon)
               = ' ' + defaultFlag.name
 
             ul.dropdown-menu.languages
-              if Array.isArray(setting.flag)
-                each flag in setting.flag
-                  li(class=flag.default ? 'active' : '')
-                    a(href=url_for(flag.index))
-                      img(src=url_for('images/flags/' + flag.icon + '.png') alt=flag.icon)
-                      = ' ' + flag.name
-              else
-                li.active
-                  a(href=url_for(defaultFlag.index || '/index.html'))
-                    img(src=url_for('images/flags/' + defaultFlag.icon + '.png') alt=defaultFlag.icon)
-                    = ' ' + defaultFlag.name
+              each flag in (Array.isArray(flags) ? flags : [defaultFlag])
+                li(class=flag.default ? 'active' : '')
+                  a(href=getFlagUrl(flag))
+                    img(src=getFlagIcon(flag) alt=flag.icon)
+                    = ' ' + flag.name
 
           li.switch-mode.hover-line(onclick='switchNightMode()')
             a(href='#')
@@ -64,21 +62,21 @@ body.page-body
 
       if is_home() || isChildPage
         - const menuSetting = isChildPage ? page : theme
-        - console.log(menuSetting);
         each e in menuSetting.menu
           if e.submenu
             each subMenu in e.submenu
-              - const childPath = page.path.replace('index.html', '') + subMenu.config
+              - const childPath = page.path.replace('index.html', '') + (subMenu.config || '')
               - const key = isChildPage ? childPath : subMenu.config
               - var menus = (site.data && site.data[key]) ? site.data[key] : (menuSetting[subMenu.config] || [])
               - const menuName = subMenu.name
               include common/group
           else
-            - const childPath = page.path.replace('index.html', '') + e.config
+            - const childPath = page.path.replace('index.html', '') + (e.config || '')
             - const key = isChildPage ? childPath : e.config
             - var menus = (site.data && site.data[key]) ? site.data[key] : (menuSetting[e.config] || [])
             - const menuName = e.name
             include common/group
 
+      script(src=url_for("/js/footer.js"))
       if setting.js && setting.js.footer
-          script(src=url_for(setting.js.footer))
+        script(src=url_for(setting.js.footer))
