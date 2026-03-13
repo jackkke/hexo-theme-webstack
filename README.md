@@ -1,48 +1,26 @@
-# hexo-theme-webstack
+# hexo-theme-webstack2
 
-[中文文档](https://github.com/HCLonely/hexo-theme-webstack/blob/master/README_CN.md)
+[中文文档](https://github.com/jackkke/hexo-theme-webstack/blob/master/README_CN.md)
 
 > A Hexo theme based on [WebStackPage](https://github.com/WebStackPage/WebStackPage.github.io).
 
-![screenshot](https://github.com/HCLonely/hexo-theme-webstack/raw/master/screenshot/screenshot.png)
+![screenshot](https://github.com/jackkke/hexo-theme-webstack/raw/master/screenshot/screenshot.png)
 
 ## Installation
 
-### hexo >= 4.0
-
 ```shell
-git clone https://github.com/HCLonely/hexo-theme-webstack themes/webstack
-
-# Install dependencies
-npm install hexo-renderer-pug pug --save
-```
-
-### hexo >= 5.0
-
-```shell
-npm install hexo-theme-webstack --save
+npm install hexo-theme-webstack2 --save
 ```
 
 or
 
 ```shell
-cnpm install hexo-theme-webstack --save
+cnpm install hexo-theme-webstack2 --save
 ```
 
 ## Configuration
 
-### hexo >= 4.0
-
-Copy the `_config.example.yml` file in the `themes/webstack/` directory to the `rootDir/source/_data/` directory and rename it to `webstack.yml`.
-
-Configure it by editing `webstack.yml`.
-
-### hexo >= 5.0
-
-- If this theme is newly installed, a `_config.webstack.yml` file will be generated in the root directory after the installation is complete, and you can directly edit the `_config.webstack.yml` file for configuration.
-- If it is a theme upgrade, you can use the configuration method of hexo >= 4.0, or you can move the original configuration file to the root directory and rename it to `_config.webstack.yml`.
-
-> Note: Please keep only one of `rootDir/_config.webstack.yml` and `rootDir/source/_data/webstack.yml`!
+After installation is complete, a `_config.webstack2.yml` file will be generated in the root directory. You can directly edit the `_config.webstack2.yml` file for configuration.
 
 ### favicon
 
@@ -140,7 +118,7 @@ userDefinedSearchData:
 
 Examples:
 ```yml
-githubCorner: '<a href="https://github.com/HCLonely/hexo-theme-webstack" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>'
+githubCorner: '<a href="https://github.com/jackkke/hexo-theme-webstack" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>'
 ```
 
 ### since
@@ -242,7 +220,7 @@ Examples:
 aboutPage:
   website:
     head: 关于本站
-    html: '<blockquote><p>本站是hexo主题<a href="https://github.com/HCLonely/hexo-theme-webstack">hexo-theme-webstack</a>的demo站。</p></blockquote>'
+    html: '<blockquote><p>本站是hexo主题<a href="https://github.com/jackkke/hexo-theme-webstack">hexo-theme-webstack</a>的demo站。</p></blockquote>'
   webmaster:
     head: 关于站长
     name: HCLonely
@@ -286,6 +264,46 @@ custom:
   body: |- # Insert the following content before the </body> tag, you can set multiple lines, pay attention to at least four spaces at the beginning of each line.
     <div>custom text</div>
     <script src="custom.js"></script>
+```
+
+### js
+
+> CDN JavaScript resources configuration.
+
+Local JavaScript files (header.js, footer.js, resizeable.min.js, joinable.js, xenon-api.min.js, xenon-toggles.min.js, xenon-custom.min.js) are built-in and cannot be configured. Only the following CDN resources are configurable:
+
+- jquery: jQuery library
+- bootstrap: Bootstrap JS
+- TweenMax: GSAP TweenMax
+- lozad: Lazy loading library
+- busuanzi: Website statistics
+
+Examples:
+```yml
+js:
+  jquery: //cdn.jsdelivr.net/npm/jquery@1.11.1/dist/jquery.min.js
+  bootstrap: //cdn.jsdelivr.net/npm/bootstrap@3.3.1/dist/js/bootstrap.min.js
+  TweenMax: //cdn.jsdelivr.net/npm/gsap@1.13.2/src/minified/TweenMax.min.js
+  lozad: //cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js
+  busuanzi: //cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.min.js
+```
+
+### css
+
+> CDN CSS resources configuration.
+
+Local CSS files (hclonely.css, linecons.min.css, xenon-core.min.css, xenon-components.min.css, xenon-skins.min.css, nav.min.css) are built-in and cannot be configured. Only the following CDN resources are configurable:
+
+- fonts: Google Fonts
+- fontawesome: Font Awesome
+- bootstrap: Bootstrap CSS
+
+Examples:
+```yml
+css:
+  fonts: //fonts.loli.net/css?family=Arimo:400,700,400italic
+  fontawesome: https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css
+  bootstrap: //cdn.jsdelivr.net/npm/bootstrap@3.3.1/dist/css/bootstrap.min.css
 ```
 
 ## config
@@ -356,6 +374,6 @@ Use `hexo new page xxx` to create a child page, including the following descript
 
 After using the above command to generate the subpage, open the `root directory/source/child/index.md` file (subpage configuration file), and add a line `type:'child'` between the two `---` This configuration file takes effect. The sub-page uses the configuration of the homepage by default, and the sub-page preferentially uses the configuration between the two `---` sub-page configuration files. Each configuration item has the same configuration function as the homepage.
 
-See the example[https://github.com/HCLonely/hexo-theme-webstack/raw/refs/heads/gh-pages/source/child/index.md](https://github.com/HCLonely/hexo-theme-webstack/raw/refs/heads/gh-pages/source/child/index.md)
+See the example[https://github.com/jackkke/hexo-theme-webstack/raw/refs/heads/gh-pages/source/child/index.md](https://github.com/jackkke/hexo-theme-webstack/raw/refs/heads/gh-pages/source/child/index.md)
 
 > Since the subpage was basically completed a long time ago, it was later put on hold when it was busy. There may be some configuration or bugs that have been forgotten. If you have any questions, please feedback in time!

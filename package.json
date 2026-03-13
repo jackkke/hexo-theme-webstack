@@ -1,6 +1,6 @@
 {
-  "name": "hexo-theme-webstack",
-  "version": "3.0.5",
+  "name": "hexo-theme-webstack2",
+  "version": "4.0.1",
   "description": "A hexo theme based on webstack.",
   "keywords": [
     "hexo",
@@ -9,20 +9,18 @@
   ],
   "main": "index.js",
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=20.19.0"
   },
-  "scripts": {
-    "postinstall": "node ./move_config.js"
-  },
-  "author": "HCLonely <h1606051253@gmail.com>",
+  "scripts": {},
+  "author": "jackkke<hangao1204@hotmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/HCLonely/hexo-theme-webstack/issues",
-    "email": "h1606051253@gmail.com"
+    "url": "https://github.com/jackkke/hexo-theme-webstack/issues",
+    "email": "hangao1204@hotmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/HCLonely/hexo-theme-webstack.git"
+    "url": "https://github.com/jackkke/hexo-theme-webstack.git"
   },
   "dependencies": {
     "hexo-renderer-pug": "^3.0.0",

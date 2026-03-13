@@ -1,46 +1,24 @@
-# hexo-theme-webstack
+# hexo-theme-webstack2
 
 > 一款基于[WebStackPage](https://github.com/WebStackPage/WebStackPage.github.io)的 Hexo 主题。
 
-![screenshot](https://github.com/HCLonely/hexo-theme-webstack/raw/master/screenshot/screenshot.png)
+![screenshot](https://github.com/jackkke/hexo-theme-webstack/raw/master/screenshot/screenshot.png)
 
 ## 安装
 
-### hexo >= 4.0
-
 ```shell
-git clone https://github.com/HCLonely/hexo-theme-webstack themes/webstack
-
-# 安装依赖
-npm install hexo-renderer-pug pug --save
-```
-
-### hexo >= 5.0
-
-```shell
-npm install hexo-theme-webstack --save
+npm install hexo-theme-webstack2 --save
 ```
 
 or
 
 ```shell
-cnpm install hexo-theme-webstack --save
+cnpm install hexo-theme-webstack2 --save
 ```
 
 ## 配置
 
-### hexo >= 4.0
-
-将`themes/webstack/`目录内的`_config.example.yml`文件复制到`博客根目录/source/_data/`目录内，并重命名为`webstack.yml`.
-
-通过编辑`webstack.yml`进行配置。
-
-### hexo >= 5.0
-
-- 如果是新安装本主题，安装完成后会在根目录生成一个`_config.webstack.yml`文件，直接编辑`_config.webstack.yml`文件进行配置即可。
-- 如果是主题升级，可以使用 hexo >= 4.0 的配置方法，也可以将原来的配置文件移动到根目录，并重命名为`_config.webstack.yml`.
-
-> 注意：`博客根目录/_config.webstack.yml`和`博客根目录/source/_data/webstack.yml`请只保留一个！
+安装完成后会在根目录生成一个`_config.webstack2.yml`文件，直接编辑`_config.webstack2.yml`文件进行配置即可。
 
 ### favicon
 
@@ -145,7 +123,7 @@ userDefinedSearchData:
 示例：
 
 ```yml
-githubCorner: '<a href="https://github.com/HCLonely/hexo-theme-webstack" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>'
+githubCorner: '<a href="https://github.com/jackkke/hexo-theme-webstack" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>'
 ```
 
 ### since
@@ -251,7 +229,7 @@ type: 'about'
 aboutPage:
   website:
     head: 关于本站
-    html: '<blockquote><p>本站是hexo主题<a href="https://github.com/HCLonely/hexo-theme-webstack">hexo-theme-webstack</a>的demo站。</p></blockquote>'
+    html: '<blockquote><p>本站是hexo主题<a href="https://github.com/jackkke/hexo-theme-webstack">hexo-theme-webstack</a>的demo站。</p></blockquote>'
   webmaster:
     head: 关于站长
     name: HCLonely
@@ -297,6 +275,48 @@ custom:
   body: |- # 以下内容插入到</body>标签之前，可设置多行，注意每行开头至少四个空格
     <div>custom text</div>
     <script src="custom.js"></script>
+```
+
+### js
+
+> CDN JavaScript 资源配置。
+
+本地 JavaScript 文件（header.js, footer.js, resizeable.min.js, joinable.js, xenon-api.min.js, xenon-toggles.min.js, xenon-custom.min.js）已内置，不可配置。仅以下 CDN 资源可配置：
+
+- jquery: jQuery 库
+- bootstrap: Bootstrap JS
+- TweenMax: GSAP TweenMax
+- lozad: 懒加载库
+- busuanzi: 网站统计
+
+示例：
+
+```yml
+js:
+  jquery: //cdn.jsdelivr.net/npm/jquery@1.11.1/dist/jquery.min.js
+  bootstrap: //cdn.jsdelivr.net/npm/bootstrap@3.3.1/dist/js/bootstrap.min.js
+  TweenMax: //cdn.jsdelivr.net/npm/gsap@1.13.2/src/minified/TweenMax.min.js
+  lozad: //cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js
+  busuanzi: //cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.min.js
+```
+
+### css
+
+> CDN CSS 资源配置。
+
+本地 CSS 文件（hclonely.css, linecons.min.css, xenon-core.min.css, xenon-components.min.css, xenon-skins.min.css, nav.min.css）已内置，不可配置。仅以下 CDN 资源可配置：
+
+- fonts: Google Fonts
+- fontawesome: Font Awesome
+- bootstrap: Bootstrap CSS
+
+示例：
+
+```yml
+css:
+  fonts: //fonts.loli.net/css?family=Arimo:400,700,400italic
+  fontawesome: https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css
+  bootstrap: //cdn.jsdelivr.net/npm/bootstrap@3.3.1/dist/css/bootstrap.min.css
 ```
 
 ## config
@@ -375,6 +395,6 @@ hotTools:
 
 使用上面的命令生成子页面后，打开`根目录/source/child/index.md`文件（子页面配置文件），在两个`---`之间添加一行`type: 'child'`使此配置文件生效，子页面默认使用主页的配置，子页面优先使用子页面配置文件两个`---`之间的配置，各配置项和主页的配置功能相同。
 
-示例请看[https://github.com/HCLonely/hexo-theme-webstack/raw/refs/heads/gh-pages/source/child/index.md](https://github.com/HCLonely/hexo-theme-webstack/raw/refs/heads/gh-pages/source/child/index.md)
+示例请看[https://github.com/jackkke/hexo-theme-webstack/raw/refs/heads/gh-pages/source/child/index.md](https://github.com/jackkke/hexo-theme-webstack/raw/refs/heads/gh-pages/source/child/index.md)
 
 > 由于子页面在很久之前就基本做完了，后来比较忙就鸽了，可能有些配置或 bug 给忘了，有问题请及时反馈！
