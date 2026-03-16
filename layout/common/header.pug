@@ -15,7 +15,7 @@
       each e in setting.menu
         li(class=e.submenu && setting.expandAll ? 'expanded' : '')
           if e.submenu
-            a.fas.fa-angle-down(style='cursor: pointer;')
+            a.fas.fa-angle-down(style='cursor: pointer;width: 100%;text-align: left;')
               i(class=e.icon)
               span.title= e.name
             ul(style=`display: ${setting.expandAll ? 'block' : 'none'}`)

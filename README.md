@@ -57,6 +57,6 @@ Example:
 ```yml
 css:
   fonts: //fonts.loli.net/css?family=Arimo:400,700,400italic
-  fontawesome: https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css
+  fontawesome: //cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css
   bootstrap: //cdn.jsdelivr.net/npm/bootstrap@3.3.1/dist/css/bootstrap.min.css
 ```
