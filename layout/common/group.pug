@@ -14,7 +14,6 @@ h4.text-gray
       )
         .xe-comment-entry
           - var imgUrl = menu.img || (menu.url ? menu.url.replace(/^(https?:\/\/)([^/]+).*$/, '$1$2') + '/favicon.ico' : '');
-          - console.log('menu.img:', menu.img, 'menu.url:', menu.url, 'imgUrl:', imgUrl)
           a.xe-user-img(data-debug-img=imgUrl)
             img.lozad.img-circle(data-src=url_for(imgUrl) width='40')
           .xe-comment
