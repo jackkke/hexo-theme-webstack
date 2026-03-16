@@ -4,7 +4,7 @@ h4.text-gray
 
 .row
   each menu in menus
-    .col-sm-3
+    .col-6.col-sm-4.col-md-3.col-xl-2
       .xe-widget.xe-conversations.box2.label-info(
         onclick='window.open("' + url_for(menu.url) + '", "_blank")'
         data-toggle='tooltip'
