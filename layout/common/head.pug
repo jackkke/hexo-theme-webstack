@@ -21,7 +21,6 @@ head
     var userDefinedSearchData = !{JSON.stringify(setting.userDefinedSearchData || {})};
     var expandAll = #{setting.expandAll ? 'true' : 'false'};
 
-  != js(setting.js.header)
   script(src=url_for("/js/header.js"))
 
   // FB Open Graph

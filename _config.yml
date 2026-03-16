@@ -31,39 +31,12 @@ menu:
   - name: 测试页面
     icon: far fa-star
     config: testPage
-  - name: 常用工具
-    icon: far fa-star
-    config: devTools
-  - name: 其他工具
-    icon: fas fa-tools
-    submenu:
-      - name: 开发工具
-        icon: fas fa-tools
-        config: devTools
-      - name: 我的博客
-        icon: fas fa-blog
-        config: myBlog
 
 testPage:
   - name: Child Page
     url: /child
     img: //book.jackkke.workers.dev/_media/jackkke.jpg
     description: 子页面测试
-devTools:
-  - name: Github
-    url: https://github.com/
-    img: /images/logos/github.png
-    description: 面向开源及私有软件项目的托管平台。
-  - name: Github
-    url: https://github.com/
-    img: /images/logos/github.png
-    description: 面向开源及私有软件项目的托管平台。
-
-myBlog:
-  - name: Jackkke Blog
-    url: https://blog.jackkke.workers.dev/
-    img: //book.jackkke.workers.dev/_media/jackkke.jpg
-    description: 一个懒人的博客。
 
 about:
   url: /about/
