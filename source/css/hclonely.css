@@ -432,3 +432,12 @@ body.night .go-up a:hover {
     display: none !important;
   }
 }
+
+.sidebar-menu:not(.collapsed) .main-menu>li.has-sub>a {
+  text-align: left;
+  width: 100%;
+}
+
+.sidebar-menu.collapsed .main-menu>li.has-sub>a {
+  text-align: center;
+}
