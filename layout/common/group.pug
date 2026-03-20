@@ -13,9 +13,21 @@ h4.text-gray
         data-original-title=url_for(menu.url)
       )
         .xe-comment-entry
-          - var imgUrl = menu.img || (menu.url ? menu.url.replace(/^(https?:\/\/)([^/]+).*$/, '$1$2') + '/favicon.ico' : '');
+          - let imgUrl = menu.img;
+          - let fallback1 = imgUrl;
+          - let fallback2 = imgUrl;
+          - if (!menu.img) {
+          -   try {
+          -     const domain = new URL(menu.url).hostname;
+          -     if (domain) {
+          -       imgUrl = 'https://favicon.so/' + domain;
+          -       fallback1 = 'https://favicon.im/' + domain;
+          -       fallback2 = 'https://' + domain + '/favicon.ico';
+          -     }
+          -   } catch (e) {}
+          - }
           a.xe-user-img(data-debug-img=imgUrl)
-            img.lozad.img-circle(data-src=url_for(imgUrl) width='40')
+            img.lozad.img-circle(data-src=url_for(imgUrl) width='40' onerror=`this.onerror=null; this.src='${fallback1}'; this.onerror=function(){ this.onerror=null; this.src='${fallback2}'; }`)
           .xe-comment
             a.xe-user-name.overflowClip_1(href='#')
               strong= menu.name
